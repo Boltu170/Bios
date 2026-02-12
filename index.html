@@ -1,0 +1,929 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nervous System - Foundation Course</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #D2B48C; /* Tan background */
+            color: #000000; /* Black text */
+            overflow-x: hidden;
+        }
+
+        .slide-container {
+            width: 100%;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+
+        .slide {
+            display: none;
+            animation: fadeIn 0.5s;
+        }
+
+        .slide.active {
+            display: block;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+
+        h1 {
+            font-size: 2.5em;
+            margin-bottom: 20px;
+            text-align: center;
+            border-bottom: 3px solid #000;
+            padding-bottom: 10px;
+        }
+
+        h2 {
+            font-size: 2em;
+            margin-bottom: 15px;
+            color: #000;
+        }
+
+        h3 {
+            font-size: 1.5em;
+            margin: 15px 0 10px 0;
+            color: #000;
+        }
+
+        ul {
+            margin-left: 30px;
+            line-height: 1.8;
+            font-size: 1.2em;
+        }
+
+        li {
+            margin-bottom: 10px;
+        }
+
+        .diagram-placeholder {
+            background-color: #F5DEB3;
+            border: 3px dashed #000;
+            padding: 20px;
+            margin: 20px 0;
+            text-align: center;
+            min-height: 300px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: bold;
+        }
+
+        .diagram-placeholder img {
+            max-width: 100%;
+            height: auto;
+        }
+
+        .quiz-box {
+            background-color: #F4A460;
+            border: 2px solid #000;
+            padding: 20px;
+            margin: 20px 0;
+            border-radius: 5px;
+        }
+
+        .quiz-question {
+            font-size: 1.3em;
+            font-weight: bold;
+            margin-bottom: 15px;
+        }
+
+        .quiz-options {
+            list-style-type: none;
+            margin-left: 0;
+        }
+
+        .quiz-options li {
+            padding: 10px;
+            margin: 5px 0;
+            background-color: #D2B48C;
+            cursor: pointer;
+            border: 2px solid #000;
+            border-radius: 3px;
+            transition: background-color 0.3s;
+        }
+
+        .quiz-options li:hover {
+            background-color: #C19A6B;
+        }
+
+        .answer-hidden {
+            background-color: #98FB98;
+            padding: 10px;
+            margin-top: 10px;
+            border: 2px solid #000;
+            display: none;
+            font-weight: bold;
+        }
+
+        .navigation {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px 0;
+            margin-top: 20px;
+            border-top: 3px solid #000;
+        }
+
+        .nav-button {
+            background-color: #000;
+            color: #D2B48C;
+            border: none;
+            padding: 15px 30px;
+            font-size: 1.2em;
+            cursor: pointer;
+            border-radius: 5px;
+            font-weight: bold;
+            transition: background-color 0.3s;
+        }
+
+        .nav-button:hover {
+            background-color: #333;
+        }
+
+        .nav-button:disabled {
+            background-color: #666;
+            cursor: not-allowed;
+        }
+
+        .slide-counter {
+            font-size: 1.3em;
+            font-weight: bold;
+        }
+
+        .highlight {
+            background-color: #FFD700;
+            padding: 2px 5px;
+            font-weight: bold;
+        }
+
+        .important-box {
+            background-color: #FFB6C1;
+            border: 3px solid #000;
+            padding: 15px;
+            margin: 15px 0;
+            font-size: 1.1em;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+        }
+
+        table th, table td {
+            border: 2px solid #000;
+            padding: 12px;
+            text-align: left;
+        }
+
+        table th {
+            background-color: #8B4513;
+            color: #fff;
+            font-size: 1.2em;
+        }
+
+        .show-answer-btn {
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            cursor: pointer;
+            font-size: 1em;
+            margin-top: 10px;
+            border-radius: 3px;
+        }
+
+        .show-answer-btn:hover {
+            background-color: #45a049;
+        }
+    </style>
+</head>
+<body>
+    <div class="slide-container">
+        
+        <!-- SLIDE 1 -->
+        <div class="slide active">
+            <h1>The Nervous System</h1>
+            <h2 style="text-align: center;">How Your Body Sends Messages</h2>
+            <div style="text-align: center; margin-top: 50px;">
+                <p style="font-size: 1.5em; line-height: 2;">Week 4: Central & Peripheral Nervous System</p>
+                <p style="font-size: 1.5em; line-height: 2;">Neurons and Synapses</p>
+                <p style="font-size: 1.3em; margin-top: 50px;">Foundation Biology</p>
+            </div>
+            <div class="diagram-placeholder">
+                📂 INSERT: Page 1 brain X-ray image from Central_and_Peripheral_Nervous_system.pdf
+            </div>
+        </div>
+
+        <!-- SLIDE 2 -->
+        <div class="slide">
+            <h1>What We're Learning Today</h1>
+            <ul>
+                <li>What the nervous system is and its two main parts</li>
+                <li>Different parts of the brain and what they do</li>
+                <li>How nerve cells (neurons) work</li>
+                <li>How electrical signals travel down neurons</li>
+                <li>How messages jump between nerve cells (synapses)</li>
+            </ul>
+            <div class="important-box">
+                <strong>Why This Matters:</strong> Understanding this = understanding pain, drugs, paralysis, reflexes, and how your brain controls EVERYTHING
+            </div>
+        </div>
+
+        <!-- SLIDE 3 -->
+        <div class="slide">
+            <h1>Nervous System = Two Main Parts</h1>
+            <div class="diagram-placeholder">
+                📂 INSERT: Page 3 CNS/PNS body diagram from Central_and_Peripheral_Nervous_system.pdf
+            </div>
+            <table>
+                <tr>
+                    <th>CNS (Central Nervous System)</th>
+                    <th>PNS (Peripheral Nervous System)</th>
+                </tr>
+                <tr>
+                    <td>Brain + Spinal Cord</td>
+                    <td>All other nerves in body</td>
+                </tr>
+                <tr>
+                    <td>The "BOSS" - makes decisions</td>
+                    <td>The "MESSENGERS" - carry information</td>
+                </tr>
+                <tr>
+                    <td>Protected by skull and spine</td>
+                    <td>Spread throughout entire body</td>
+                </tr>
+            </table>
+        </div>
+
+        <!-- SLIDE 4 -->
+        <div class="slide">
+            <h1>Nervous System Subdivisions</h1>
+            <div class="diagram-placeholder">
+                📂 INSERT: Page 4 subdivisions flowchart from Central_and_Peripheral_Nervous_system.pdf
+            </div>
+            <ul>
+                <li><span class="highlight">CNS</span>: Processes information, stores memories, gives orders</li>
+                <li><span class="highlight">PNS - Sensory</span>: Feels things (hot, cold, pain, touch)</li>
+                <li><span class="highlight">PNS - Motor</span>: Makes muscles move (voluntary)</li>
+                <li><span class="highlight">PNS - Autonomic</span>: Automatic stuff you don't control (heartbeat, digestion, breathing)</li>
+            </ul>
+            <div class="important-box">
+                <strong>Autonomic has 2 parts:</strong><br>
+                • Sympathetic = "Fight or Flight" (speeds things up)<br>
+                • Parasympathetic = "Rest and Digest" (slows things down)
+            </div>
+        </div>
+
+        <!-- SLIDE 5 -->
+        <div class="slide">
+            <h1>Brain Structure - The 4 Lobes</h1>
+            <div class="diagram-placeholder">
+                📂 INSERT: Page 8 colored brain lobes diagram from Central_and_Peripheral_Nervous_system.pdf
+            </div>
+            <table>
+                <tr>
+                    <th>Brain Region</th>
+                    <th>Main Function</th>
+                </tr>
+                <tr>
+                    <td>Frontal Lobe (Blue)</td>
+                    <td>Thinking, planning, talking, personality</td>
+                </tr>
+                <tr>
+                    <td>Parietal Lobe (Green)</td>
+                    <td>Touch, temperature, body awareness</td>
+                </tr>
+                <tr>
+                    <td>Temporal Lobe (Yellow)</td>
+                    <td>Memory, hearing, understanding language</td>
+                </tr>
+                <tr>
+                    <td>Occipital Lobe (Red)</td>
+                    <td>Vision - seeing and understanding images</td>
+                </tr>
+                <tr>
+                    <td>Cerebellum (Orange)</td>
+                    <td>Balance, coordination, smooth movements</td>
+                </tr>
+            </table>
+        </div>
+
+        <!-- SLIDE 6 -->
+        <div class="slide">
+            <h1>Quiz Time: Brain Functions</h1>
+            <div class="quiz-box">
+                <div class="quiz-question">Question 1: Which lobe controls your ability to speak?</div>
+                <ul class="quiz-options">
+                    <li>A) Temporal lobe</li>
+                    <li>B) Occipital lobe</li>
+                    <li>C) Parietal lobe</li>
+                    <li>D) Frontal lobe</li>
+                </ul>
+                <button class="show-answer-btn" onclick="document.getElementById('answer1').style.display='block'">Show Answer</button>
+                <div id="answer1" class="answer-hidden">✓ ANSWER: D - Frontal lobe (controls speech, language production)</div>
+            </div>
+
+            <div class="quiz-box">
+                <div class="quiz-question">Question 2: You touch a hot stove. Which lobe feels the heat?</div>
+                <ul class="quiz-options">
+                    <li>A) Cerebellum</li>
+                    <li>B) Frontal lobe</li>
+                    <li>C) Occipital lobe</li>
+                    <li>D) Parietal lobe</li>
+                </ul>
+                <button class="show-answer-btn" onclick="document.getElementById('answer2').style.display='block'">Show Answer</button>
+                <div id="answer2" class="answer-hidden">✓ ANSWER: D - Parietal lobe (processes touch, temperature, pain)</div>
+            </div>
+        </div>
+
+        <!-- SLIDE 7 -->
+        <div class="slide">
+            <h1>The Cerebellum - "Little Brain"</h1>
+            <div class="diagram-placeholder">
+                📂 INSERT: Page 13 cerebellum diagram from Central_and_Peripheral_Nervous_system.pdf
+            </div>
+            <h3>What It Does:</h3>
+            <ul>
+                <li>Coordinates <span class="highlight">smooth movements</span></li>
+                <li>Keeps you <span class="highlight">balanced</span> (you don't fall over)</li>
+                <li>Controls <span class="highlight">posture</span></li>
+                <li>Makes movements precise (writing, catching a ball)</li>
+            </ul>
+            <div class="important-box">
+                <strong>🍺 Why Drunk People Stumble:</strong><br>
+                Alcohol affects the cerebellum → poor balance and coordination → stumbling like the image on slide 14!
+            </div>
+        </div>
+
+        <!-- SLIDE 8 -->
+        <div class="slide">
+            <h1>Brain Stem - Keeps You Alive</h1>
+            <div class="diagram-placeholder">
+                📂 INSERT: Page 11 brain stem diagram from Central_and_Peripheral_Nervous_system.pdf
+            </div>
+            <h3>Three Parts:</h3>
+            <ul>
+                <li><span class="highlight">Medulla Oblongata</span>: Controls breathing, heart rate, blood pressure</li>
+                <li><span class="highlight">Pons</span>: Controls sleep/wake cycles, relays messages</li>
+                <li><span class="highlight">Midbrain</span>: Eye movements, hearing reflexes</li>
+            </ul>
+            <div class="important-box">
+                ⚠️ <strong>CRITICAL:</strong> Damage to brain stem = LIFE-THREATENING (controls breathing and heartbeat!)
+            </div>
+        </div>
+
+        <!-- SLIDE 9 -->
+        <div class="slide">
+            <h1>Case Studies: Brain Damage</h1>
+            <div class="quiz-box">
+                <div class="quiz-question">Case 1: An elderly man has a stroke. He can't talk anymore. Which side of brain was damaged?</div>
+                <button class="show-answer-btn" onclick="document.getElementById('case1').style.display='block'">Show Answer</button>
+                <div id="case1" class="answer-hidden">
+                    ✓ ANSWER: LEFT hemisphere<br>
+                    Why? Language (speech production) is usually controlled by LEFT frontal lobe
+                </div>
+            </div>
+
+            <div class="quiz-box">
+                <div class="quiz-question">Case 2: A woman has a stroke. She's very emotional and doesn't recognize her own children. Which side damaged?</div>
+                <button class="show-answer-btn" onclick="document.getElementById('case2').style.display='block'">Show Answer</button>
+                <div id="case2" class="answer-hidden">
+                    ✓ ANSWER: RIGHT hemisphere<br>
+                    Why? Emotion recognition and facial recognition are RIGHT hemisphere functions
+                </div>
+            </div>
+
+            <div class="quiz-box">
+                <div class="quiz-question">Case 3: A man hits his head. He staggers around like a drunk person. Which brain area damaged?</div>
+                <button class="show-answer-btn" onclick="document.getElementById('case3').style.display='block'">Show Answer</button>
+                <div id="case3" class="answer-hidden">
+                    ✓ ANSWER: CEREBELLUM<br>
+                    Why? Controls balance and coordination - damage = stumbling and poor motor control
+                </div>
+            </div>
+        </div>
+
+        <!-- SLIDE 10 -->
+        <div class="slide">
+            <h1>What Are Neurons?</h1>
+            <div class="diagram-placeholder">
+                📂 INSERT: Page 2 labeled neuron diagram from Neurones_and_synapses.pdf
+            </div>
+            <h3>Neurons = Nerve Cells That Send Electrical Messages</h3>
+            <table>
+                <tr>
+                    <th>Part</th>
+                    <th>Function</th>
+                </tr>
+                <tr>
+                    <td>Cell Body</td>
+                    <td>Control center - has nucleus and organelles</td>
+                </tr>
+                <tr>
+                    <td>Dendrites</td>
+                    <td>RECEIVERS - get messages from other neurons</td>
+                </tr>
+                <tr>
+                    <td>Axon</td>
+                    <td>SENDER - sends electrical signals away from cell body</td>
+                </tr>
+                <tr>
+                    <td>Myelin Sheath</td>
+                    <td>INSULATION - makes signals travel SUPER FAST</td>
+                </tr>
+                <tr>
+                    <td>Synaptic Bulbs</td>
+                    <td>End terminals - release chemicals to next neuron</td>
+                </tr>
+            </table>
+        </div>
+
+        <!-- SLIDE 11 -->
+        <div class="slide">
+            <h1>Three Types of Neurons</h1>
+            <div class="diagram-placeholder">
+                📂 INSERT: Page 4 three neuron types diagram from Neurones_and_synapses.pdf
+            </div>
+            <table>
+                <tr>
+                    <th>Type</th>
+                    <th>Direction</th>
+                    <th>Example</th>
+                </tr>
+                <tr>
+                    <td><strong>Sensory Neuron</strong></td>
+                    <td>Receptor → CNS</td>
+                    <td>"Ouch! That's hot!" (pain signal to brain)</td>
+                </tr>
+                <tr>
+                    <td><strong>Relay Neuron</strong><br>(Intermediate)</td>
+                    <td>Inside CNS only</td>
+                    <td>Connects sensory to motor neurons in spinal cord/brain</td>
+                </tr>
+                <tr>
+                    <td><strong>Motor Neuron</strong></td>
+                    <td>CNS → Muscle/Gland</td>
+                    <td>"Move your hand away!" (brain to muscles)</td>
+                </tr>
+            </table>
+        </div>
+
+        <!-- SLIDE 12 -->
+        <div class="slide">
+            <h1>Sensory vs Motor Neurons</h1>
+            <div class="diagram-placeholder">
+                📂 INSERT: Page 5 sensory and motor neuron comparison from Neurones_and_synapses.pdf
+            </div>
+            <table>
+                <tr>
+                    <th>Feature</th>
+                    <th>Sensory Neuron</th>
+                    <th>Motor Neuron</th>
+                </tr>
+                <tr>
+                    <td>Cell body location</td>
+                    <td>MIDDLE (outside CNS)</td>
+                    <td>TOP (inside CNS)</td>
+                </tr>
+                <tr>
+                    <td>Has dendron?</td>
+                    <td>YES - long</td>
+                    <td>NO</td>
+                </tr>
+                <tr>
+                    <td>Axon length</td>
+                    <td>SHORT</td>
+                    <td>LONG</td>
+                </tr>
+                <tr>
+                    <td>Starts at</td>
+                    <td>Sensory receptor</td>
+                    <td>Spinal cord/brain</td>
+                </tr>
+                <tr>
+                    <td>Ends at</td>
+                    <td>Spinal cord/brain</td>
+                    <td>Muscle or gland</td>
+                </tr>
+            </table>
+        </div>
+
+        <!-- SLIDE 13 -->
+        <div class="slide">
+            <h1>Why Myelin Sheath Matters</h1>
+            <div class="diagram-placeholder">
+                📂 INSERT: Page 3 Schwann cell and myelin diagram from Neurones_and_synapses.pdf
+            </div>
+            <h3>Myelin = Fatty Insulation (Like Coating on Electrical Wires)</h3>
+            <ul>
+                <li><span class="highlight">WITH myelin:</span> Signal travels at <strong>120 m/s</strong> ⚡ FAST!</li>
+                <li><span class="highlight">WITHOUT myelin:</span> Signal travels at <strong>2 m/s</strong> 🐌 SLOW!</li>
+            </ul>
+            <div class="important-box">
+                <strong>🔬 Disease Example: Multiple Sclerosis (MS)</strong><br>
+                • Immune system destroys myelin sheath<br>
+                • Nerve signals become SLOW or BLOCKED<br>
+                • Results: muscle weakness, vision problems, numbness
+            </div>
+        </div>
+
+        <!-- SLIDE 14 -->
+        <div class="slide">
+            <h1>The Reflex Arc - Fast Response</h1>
+            <div class="diagram-placeholder">
+                📂 INSERT: Page 10 reflex arc diagram from Neurones_and_synapses.pdf
+            </div>
+            <h3>Path of a Reflex (NO BRAIN NEEDED!):</h3>
+            <ol style="font-size: 1.3em; line-height: 2;">
+                <li>🔥 Hot object touches skin (STIMULUS)</li>
+                <li>👉 Sensory neuron sends signal to spinal cord</li>
+                <li>🔄 Relay neuron in spinal cord connects sensory to motor</li>
+                <li>💪 Motor neuron sends signal to muscle</li>
+                <li>✋ Hand pulls away (RESPONSE)</li>
+            </ol>
+            <div class="important-box">
+                <strong>Why So Fast?</strong> Doesn't go all the way to brain! Shorter distance = faster reaction = protects you from injury
+            </div>
+        </div>
+
+        <!-- SLIDE 15 -->
+        <div class="slide">
+            <h1>Quiz: Neuron Types & Reflex Arc</h1>
+            <div class="quiz-box">
+                <div class="quiz-question">Q1: Which neuron type carries pain signals FROM your finger TO your spinal cord?</div>
+                <ul class="quiz-options">
+                    <li>A) Relay neuron</li>
+                    <li>B) Motor neuron</li>
+                    <li>C) Sensory neuron</li>
+                </ul>
+                <button class="show-answer-btn" onclick="document.getElementById('q15-1').style.display='block'">Show Answer</button>
+                <div id="q15-1" class="answer-hidden">✓ ANSWER: C - Sensory neurons carry signals FROM receptors TO CNS</div>
+            </div>
+
+            <div class="quiz-box">
+                <div class="quiz-question">Q2: Why don't reflexes involve the brain?</div>
+                <button class="show-answer-btn" onclick="document.getElementById('q15-2').style.display='block'">Show Answer</button>
+                <div id="q15-2" class="answer-hidden">
+                    ✓ ANSWER: To be FASTER! Signal only goes to spinal cord and back → shorter distance → quicker response → protects body from danger
+                </div>
+            </div>
+
+            <div class="quiz-box">
+                <div class="quiz-question">Q3: Put in correct order: Motor neuron → Sensory neuron → Relay neuron</div>
+                <button class="show-answer-btn" onclick="document.getElementById('q15-3').style.display='block'">Show Answer</button>
+                <div id="q15-3" class="answer-hidden">
+                    ✓ CORRECT ORDER:<br>
+                    1. Sensory neuron (detects stimulus)<br>
+                    2. Relay neuron (in spinal cord)<br>
+                    3. Motor neuron (commands muscle)
+                </div>
+            </div>
+        </div>
+
+        <!-- SLIDE 16 -->
+        <div class="slide">
+            <h1>Resting Potential - Neuron at Rest</h1>
+            <div class="diagram-placeholder">
+                📂 INSERT: Page 13 resting potential diagram from Neurones_and_synapses.pdf
+            </div>
+            <h3>When Neuron Is NOT Firing:</h3>
+            <ul>
+                <li><span class="highlight">Inside cell:</span> NEGATIVE (-70mV)</li>
+                <li><span class="highlight">Outside cell:</span> POSITIVE</li>
+                <li>Like a loaded battery ready to fire!</li>
+            </ul>
+            <div class="important-box">
+                <strong>How Does It Stay This Way?</strong><br>
+                • Sodium-Potassium Pump (uses energy/ATP)<br>
+                • Pumps 3 Na⁺ OUT for every 2 K⁺ IN<br>
+                • Keeps inside negative, outside positive
+            </div>
+        </div>
+
+        <!-- SLIDE 17 -->
+        <div class="slide">
+            <h1>Action Potential - The Electrical Signal</h1>
+            <div class="diagram-placeholder">
+                📂 INSERT: Page 13 action potential graph from Neurones_and_synapses.pdf
+            </div>
+            <h3>5 Stages of Action Potential:</h3>
+            <ol style="font-size: 1.2em; line-height: 2;">
+                <li><strong>Resting Potential</strong> (-70mV) = Ready state</li>
+                <li><strong>Depolarization</strong> = Na⁺ rushes IN → becomes POSITIVE (+40mV)</li>
+                <li><strong>Repolarization</strong> = K⁺ rushes OUT → back to NEGATIVE</li>
+                <li><strong>Hyperpolarization</strong> = Too negative briefly (-80mV)</li>
+                <li><strong>Return to Resting</strong> = Back to -70mV</li>
+            </ol>
+            <div class="important-box">
+                💡 <strong>Think of it like:</strong> A wave traveling down the axon (like a stadium wave!)
+            </div>
+        </div>
+
+        <!-- SLIDE 18 -->
+        <div class="slide">
+            <h1>Action Potential - Step by Step</h1>
+            <div class="diagram-placeholder">
+                📂 INSERT: Page 12 ion movement diagram from Neurones_and_synapses.pdf
+            </div>
+            <table>
+                <tr>
+                    <th>Step</th>
+                    <th>What Happens</th>
+                </tr>
+                <tr>
+                    <td>1. Stimulus arrives</td>
+                    <td>Voltage reaches threshold (-55mV)</td>
+                </tr>
+                <tr>
+                    <td>2. Na⁺ channels OPEN</td>
+                    <td>Sodium floods INTO cell → positive inside</td>
+                </tr>
+                <tr>
+                    <td>3. Na⁺ channels CLOSE</td>
+                    <td>At +40mV, sodium channels shut</td>
+                </tr>
+                <tr>
+                    <td>4. K⁺ channels OPEN</td>
+                    <td>Potassium flows OUT of cell → negative again</td>
+                </tr>
+                <tr>
+                    <td>5. K⁺ channels CLOSE</td>
+                    <td>Slowly close → briefly too negative</td>
+                </tr>
+                <tr>
+                    <td>6. Return to normal</td>
+                    <td>Na⁺/K⁺ pump restores -70mV</td>
+                </tr>
+            </table>
+        </div>
+
+        <!-- SLIDE 19 -->
+        <div class="slide">
+            <h1>Quiz: Action Potential</h1>
+            <div class="quiz-box">
+                <div class="quiz-question">Q1: What is resting potential voltage?</div>
+                <ul class="quiz-options">
+                    <li>A) -55mV</li>
+                    <li>B) -70mV</li>
+                    <li>C) +40mV</li>
+                    <li>D) 0mV</li>
+                </ul>
+                <button class="show-answer-btn" onclick="document.getElementById('q19-1').style.display='block'">Show Answer</button>
+                <div id="q19-1" class="answer-hidden">✓ ANSWER: B) -70mV (inside is negative when resting)</div>
+            </div>
+
+            <div class="quiz-box">
+                <div class="quiz-question">Q2: During depolarization, which ion moves INTO the cell?</div>
+                <ul class="quiz-options">
+                    <li>A) Chloride (Cl⁻)</li>
+                    <li>B) Potassium (K⁺)</li>
+                    <li>C) Calcium (Ca²⁺)</li>
+                    <li>D) Sodium (Na⁺)</li>
+                </ul>
+                <button class="show-answer-btn" onclick="document.getElementById('q19-2').style.display='block'">Show Answer</button>
+                <div id="q19-2" class="answer-hidden">✓ ANSWER: D) Sodium rushes IN, making inside positive (+40mV)</div>
+            </div>
+
+            <div class="quiz-box">
+                <div class="quiz-question">Q3: What causes repolarization?</div>
+                <button class="show-answer-btn" onclick="document.getElementById('q19-3').style.display='block'">Show Answer</button>
+                <div id="q19-3" class="answer-hidden">✓ ANSWER: Potassium (K⁺) channels open and K⁺ flows OUT, making inside negative again</div>
+            </div>
+        </div>
+
+        <!-- SLIDE 20 -->
+        <div class="slide">
+            <h1>The Synapse - Neurons Don't Touch!</h1>
+            <div class="diagram-placeholder">
+                📂 INSERT: Page 18 synapse structure diagram from Neurones_and_synapses.pdf
+            </div>
+            <h3>The Problem:</h3>
+            <p style="font-size: 1.3em;">Neurons have a GAP between them (synaptic cleft) - electrical signal can't jump across!</p>
+            
+            <h3>The Solution:</h3>
+            <p style="font-size: 1.3em;">Use CHEMICAL messengers (neurotransmitters) to carry message across gap</p>
+
+            <h3>Three Parts of a Synapse:</h3>
+            <ul>
+                <li><span class="highlight">Presynaptic neuron</span> = Sending neuron (has vesicles with neurotransmitters)</li>
+                <li><span class="highlight">Synaptic cleft</span> = Gap (20-40 nanometers wide)</li>
+                <li><span class="highlight">Postsynaptic neuron</span> = Receiving neuron (has receptors)</li>
+            </ul>
+        </div>
+
+        <!-- SLIDE 21 -->
+        <div class="slide">
+            <h1>How Synapses Work - 7 Steps</h1>
+            <div class="diagram-placeholder">
+                📂 INSERT: Page 22 numbered synapse transmission diagram from Neurones_and_synapses.pdf
+            </div>
+            <ol style="font-size: 1.2em; line-height: 2;">
+                <li>⚡ Action potential arrives at axon terminal</li>
+                <li>🚪 Calcium channels OPEN → Ca²⁺ enters cell</li>
+                <li>📦 Calcium triggers vesicles to move toward membrane</li>
+                <li>🔗 Vesicles FUSE with membrane (exocytosis)</li>
+                <li>💊 Neurotransmitters RELEASED into synaptic cleft</li>
+                <li>🔑 Neurotransmitters BIND to receptors on next neuron</li>
+                <li>⚡ New action potential starts in postsynaptic neuron</li>
+            </ol>
+        </div>
+
+        <!-- SLIDE 22 -->
+        <div class="slide">
+            <h1>Neuromuscular Junction</h1>
+            <div class="diagram-placeholder">
+                📂 INSERT: Page 24 neuromuscular junction diagram from Neurones_and_synapses.pdf
+            </div>
+            <h3>Special Synapse Between Nerve and Muscle</h3>
+            <ul>
+                <li><span class="highlight">Neurotransmitter used:</span> Acetylcholine (ACh)</li>
+                <li><span class="highlight">What happens:</span>
+                    <ol>
+                        <li>ACh released from motor neuron</li>
+                        <li>ACh binds to receptors on muscle</li>
+                        <li>Sodium channels open in muscle</li>
+                        <li>Muscle cell depolarizes</li>
+                        <li>Muscle CONTRACTS</li>
+                    </ol>
+                </li>
+                <li><span class="highlight">Clean up:</span> Enzyme (acetylcholinesterase) breaks down ACh so muscle can relax</li>
+            </ul>
+        </div>
+
+        <!-- SLIDE 23 -->
+        <div class="slide">
+            <h1>When Synapses Go Wrong - Toxins</h1>
+            <div style="display: flex; gap: 20px;">
+                <div style="flex: 1;">
+                    <h3>🕷️ Black Widow Spider Venom</h3>
+                    <div class="diagram-placeholder" style="min-height: 150px;">
+                        📂 INSERT: Spider image from page 26 Neurones_and_synapses.pdf
+                    </div>
+                    <p><strong>Effect:</strong> TOO MUCH neurotransmitter released</p>
+                    <p><strong>Result:</strong></p>
+                    <ul>
+                        <li>Muscles can't RELAX</li>
+                        <li>Constant painful contractions</li>
+                        <li>Called "tetany"</li>
+                    </ul>
+                </div>
+                <div style="flex: 1;">
+                    <h3>💉 Botulinum Toxin (Botox)</h3>
+                    <div class="diagram-placeholder" style="min-height: 150px;">
+                        📂 INSERT: Botox before/after image from page 26 Neurones_and_synapses.pdf
+                    </div>
+                    <p><strong>Effect:</strong> NOT ENOUGH neurotransmitter released</p>
+                    <p><strong>Result:</strong></p>
+                    <ul>
+                        <li>Muscles can't CONTRACT</li>
+                        <li>Paralysis</li>
+                        <li>That "frozen face" look</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <!-- SLIDE 24 -->
+        <div class="slide">
+            <h1>Final Quiz - Test Yourself!</h1>
+            <div class="quiz-box">
+                <div class="quiz-question">Q1: What are the TWO main divisions of the nervous system?</div>
+                <button class="show-answer-btn" onclick="document.getElementById('final1').style.display='block'">Show Answer</button>
+                <div id="final1" class="answer-hidden">CNS (Central Nervous System) and PNS (Peripheral Nervous System)</div>
+            </div>
+
+            <div class="quiz-box">
+                <div class="quiz-question">Q2: Which brain part controls balance and coordination?</div>
+                <ul class="quiz-options">
+                    <li>A) Frontal lobe</li>
+                    <li>B) Brain stem</li>
+                    <li>C) Cerebellum</li>
+                    <li>D) Parietal lobe</li>
+                </ul>
+                <button class="show-answer-btn" onclick="document.getElementById('final2').style.display='block'">Show Answer</button>
+                <div id="final2" class="answer-hidden">✓ ANSWER: C) Cerebellum</div>
+            </div>
+
+            <div class="quiz-box">
+                <div class="quiz-question">Q3: What is the function of myelin sheath?</div>
+                <button class="show-answer-btn" onclick="document.getElementById('final3').style.display='block'">Show Answer</button>
+                <div id="final3" class="answer-hidden">Insulates the axon and makes nerve signals travel MUCH faster (120 m/s vs 2 m/s)</div>
+            </div>
+
+            <div class="quiz-box">
+                <div class="quiz-question">Q4: What is a synapse?</div>
+                <ul class="quiz-options">
+                    <li>A) The cell body of a neuron</li>
+                    <li>B) A type of brain cell</li>
+                    <li>C) The gap between two neurons</li>
+                    <li>D) The myelin covering</li>
+                </ul>
+                <button class="show-answer-btn" onclick="document.getElementById('final4').style.display='block'">Show Answer</button>
+                <div id="final4" class="answer-hidden">✓ ANSWER: C) The GAP between two neurons where chemical neurotransmitters carry the signal across</div>
+            </div>
+
+            <div class="quiz-box">
+                <div class="quiz-question">Q5: What happens during depolarization in an action potential?</div>
+                <ul class="quiz-options">
+                    <li>A) Potassium rushes out</li>
+                    <li>B) The cell returns to resting state</li>
+                    <li>C) Sodium rushes in and makes the inside positive</li>
+                    <li>D) The membrane becomes hyperpolarized</li>
+                </ul>
+                <button class="show-answer-btn" onclick="document.getElementById('final5').style.display='block'">Show Answer</button>
+                <div id="final5" class="answer-hidden">✓ ANSWER: C) Sodium (Na⁺) channels open and Na⁺ rushes INTO the cell, making the inside positive (+40mV)</div>
+            </div>
+        </div>
+
+        <!-- SLIDE 25 -->
+        <div class="slide">
+            <h1>Summary - You Now Know:</h1>
+            <ul style="font-size: 1.3em; line-height: 2;">
+                <li>✓ CNS (brain + spinal cord) vs PNS (all other nerves)</li>
+                <li>✓ Brain regions: frontal, parietal, temporal, occipital, cerebellum, brain stem</li>
+                <li>✓ Three neuron types: sensory, relay, motor</li>
+                <li>✓ Neuron structure: dendrites, cell body, axon, myelin, synaptic bulbs</li>
+                <li>✓ Reflex arc pathway (fast automatic response)</li>
+                <li>✓ Action potential: resting → depolarization → repolarization → back to resting</li>
+                <li>✓ Synaptic transmission: electrical → chemical → electrical</li>
+                <li>✓ Neuromuscular junction and how toxins affect it</li>
+            </ul>
+            <div class="important-box" style="margin-top: 30px; text-align: center; font-size: 1.3em;">
+                <strong>🎉 Well Done! You've Completed The Nervous System Module! 🎉</strong>
+            </div>
+        </div>
+
+        <!-- Navigation -->
+        <div class="navigation">
+            <button class="nav-button" id="prevBtn" onclick="changeSlide(-1)">← Previous</button>
+            <div class="slide-counter">
+                Slide <span id="currentSlide">1</span> of 25
+            </div>
+            <button class="nav-button" id="nextBtn" onclick="changeSlide(1)">Next →</button>
+        </div>
+    </div>
+
+    <script>
+        let currentSlide = 1;
+        const totalSlides = 25;
+
+        function showSlide(n) {
+            const slides = document.getElementsByClassName("slide");
+            
+            if (n > totalSlides) currentSlide = totalSlides;
+            if (n < 1) currentSlide = 1;
+            
+            // Hide all slides
+            for (let i = 0; i < slides.length; i++) {
+                slides[i].classList.remove("active");
+            }
+            
+            // Show current slide
+            slides[currentSlide - 1].classList.add("active");
+            
+            // Update counter
+            document.getElementById("currentSlide").textContent = currentSlide;
+            
+            // Update buttons
+            document.getElementById("prevBtn").disabled = (currentSlide === 1);
+            document.getElementById("nextBtn").disabled = (currentSlide === totalSlides);
+            
+            // Scroll to top
+            window.scrollTo(0, 0);
+        }
+
+        function changeSlide(direction) {
+            currentSlide += direction;
+            showSlide(currentSlide);
+        }
+
+        // Keyboard navigation
+        document.addEventListener('keydown', function(event) {
+            if (event.key === 'ArrowLeft') changeSlide(-1);
+            if (event.key === 'ArrowRight') changeSlide(1);
+        });
+
+        // Initialize
+        showSlide(currentSlide);
+    </script>
+</body>
+</html>
